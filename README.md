@@ -1,6 +1,6 @@
 <h2 align="center">안녕하세요, AI 엔지니어 안은남입니다 👋</h2>
 <p align="center">
-  <b>AI 엔지니어 · LLM / RAG 시스템 · 평가·품질 · 수리 모델링 · 영어 능통</b><br/>
+  <b>AI 엔지니어 · LLM / RAG · 평가 설계</b><br/>
   LLM이 내놓은 답을 근거와 맞춰 보고, 근거가 없으면 내보내지 않는 시스템을 만듭니다.
 </p>
 
@@ -8,7 +8,7 @@
   <a href="https://eunnamahn.github.io"><img src="https://img.shields.io/badge/웹사이트-eunnamahn.github.io-1F4E8C?style=flat-square&logo=githubpages&logoColor=white"/></a>
   <a href="https://eunnamahn.github.io/en/"><img src="https://img.shields.io/badge/English-Website-1F4E8C?style=flat-square"/></a>
   <a href="mailto:baduk89@hanmail.net"><img src="https://img.shields.io/badge/Email-baduk89%40hanmail.net-555555?style=flat-square&logo=maildotru&logoColor=white"/></a>
-  <img src="https://img.shields.io/badge/영어-능통%20(TOEIC%20985)-555555?style=flat-square"/>
+  <img src="https://img.shields.io/badge/TOEIC-985%2F990-555555?style=flat-square"/>
 </p>
 
 ---
