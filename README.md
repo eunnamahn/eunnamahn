@@ -32,7 +32,7 @@
 |---|---|---|---|
 | [**SAVERS**](https://github.com/team-savers/savers-project) 🏆 | 재난 취약계층 맞춤 홍수 대피 안내 (앱 설치 불필요) · 팀장 | **근거 없는 주장 0건**: 골든셋 35/35, 런타임 30/30, 적대 프롬프트 12/12 차단 · 대피 의향 **3.2 → 8.3** (52명, p<0.001) | FastAPI, LangChain, NetworkX, AWS EC2 |
 | [**AI 광고 스튜디오**](https://github.com/codeit-part4-team2/ad-creative-studio) | 소상공인용 광고 이미지·문구 생성, 제품은 절대 바뀌지 않게 · 팀장 | 제품 보존 관문(마스크 CLIP ≥ 0.85) **4/4** 통과 · LCM-LoRA로 배경 생성 **17.47초 → 1.72초**(약 10배) · 테스트 486건 | SDXL, ControlNet, IP-Adapter, GCP |
-| [**입찰메이트**](https://github.com/Eastar0102/codeit-part3-team1) | 공공 RFP 100건(HWP·PDF) RAG 질의응답, 출처 인용·답변 불가 시 거절 | 708개 조합 비교 · OpenAI 기본 대비 **MRR 0.65 → 0.977**, 거절 정확도 0.91 → 1.0, 응답 11.27초 → 3.6초, **비용 0원** | LangChain, LangGraph, FAISS, KURE-v1, EXAONE 3.5 |
+| [**입찰메이트**](https://github.com/Eastar0102/codeit-part3-team1) | 공공 RFP 100건(HWP·PDF) RAG 질의응답, 출처 인용·답변 불가 시 거절 · 평가 담당 | 708개 조합 비교 · OpenAI 기본 대비 **MRR 0.65 → 0.977**, 거절 정확도 0.91 → 1.0, 응답 11.27초 → 3.6초, **비용 0원** | LangChain, LangGraph, FAISS, KURE-v1, EXAONE 3.5 |
 | [**PillScope**](https://github.com/qja0707/OralMedicineImageDetection) | 경구약제 객체 탐지: 비슷한 56개 클래스, 이미지 186장, 51배 불균형 · PM | Crop & Paste로 186 → 1,026장 · 검증 mAP@[.75:.95] **0.936** · WBF 앙상블로 Kaggle **0.851 → 0.9355** | YOLOv11, RT-DETRv2, RF-DETR |
 
 **대학원 연구 (펜실베이니아 주립대)**
@@ -67,8 +67,6 @@
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
 <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
 <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
-<img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square"/>
-<img src="https://img.shields.io/badge/R-276DC3?style=flat-square&logo=r&logoColor=white"/>
 <br/>편미분방정식 해석해 · 몬테카를로 시뮬레이션 · 실험계획법 · 최적화 · 시계열·통계 모델링
 
 ### 🎓 학력 · 교육
@@ -78,9 +76,9 @@
 - **코드잇 스프린트** — AI 엔지니어 10기 수료 · 2026
 
 ### 🏅 수상 · 자격증
-- 🏆 고용노동부장관상(우수상), 제8회 K-디지털 트레이닝 해커톤 · 2026
+- 🏆 고용노동부장관상(장려상), 제8회 K-디지털 트레이닝 해커톤 · 2026
 - 🏆 EME 올해의 대학원 조교상, 펜실베이니아 주립대 · 2017
-- TOEIC 985/990 · 데이터분석 준전문가(ADsP) · Engineer in Training (EIT, 미국 공학 엔지니어 1차 자격)
+- TOEIC 985/990 · 데이터분석 준전문가(ADsP) · Engineer in Training (EIT, 미국 NCEES FE 시험 합격)
 
 <p align="center">
   <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eunnamahn&layout=compact&hide_border=true&title_color=1F4E8C"/>
