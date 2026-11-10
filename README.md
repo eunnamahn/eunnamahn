@@ -1,22 +1,22 @@
 <h2 align="center">안녕하세요, AI 엔지니어 안은남입니다 👋</h2>
 <p align="center">
   <b>AI 엔지니어 · LLM / RAG 시스템 · 평가·품질 · 수리 모델링 · 영어 능통</b><br/>
-  평가 기준을 먼저 세우고, 그 기준으로 설계를 고릅니다.
+  LLM이 내놓은 답을 근거와 맞춰 보고, 근거가 없으면 내보내지 않는 시스템을 만듭니다.
 </p>
 
 <p align="center">
   <a href="https://eunnamahn.github.io"><img src="https://img.shields.io/badge/웹사이트-eunnamahn.github.io-1F4E8C?style=flat-square&logo=githubpages&logoColor=white"/></a>
   <a href="https://eunnamahn.github.io/en/"><img src="https://img.shields.io/badge/English-Website-1F4E8C?style=flat-square"/></a>
   <a href="mailto:baduk89@hanmail.net"><img src="https://img.shields.io/badge/Email-baduk89%40hanmail.net-555555?style=flat-square&logo=maildotru&logoColor=white"/></a>
-  <img src="https://img.shields.io/badge/영어-능통%20(미국%20대학원%209년)-555555?style=flat-square"/>
+  <img src="https://img.shields.io/badge/영어-능통%20(TOEIC%20985)-555555?style=flat-square"/>
 </p>
 
 ---
 
 ### 🙋 소개
-- **검증할 수 있는** LLM 서비스를 만듭니다. 결정은 결정론적 컴포넌트가 내리고, LLM은 결과를 설명만 하며, 모든 주장은 검증기를 거칩니다.
-- 미국 **펜실베이니아 주립대**에서 9년간 석사·박사과정을 밟으며 편미분방정식 해석해, 몬테카를로 시뮬레이션, 통계 모델링으로 연구했습니다.
-- 영어로 논문을 썼고, **8년간 영어로 학부 수업 조교**를 맡았습니다.
+- **검증할 수 있는** LLM 서비스를 만듭니다. 중요한 판단은 규칙 기반 코드가 내리고, LLM은 그 결과를 설명만 하며, 모든 답변은 검증기를 거칩니다.
+- 미국 **펜실베이니아 주립대** 석사·박사과정에서 수학·통계 모델을 만들고 실제 데이터로 검증하는 연구를 했습니다.
+- 영어로 논문을 쓰고 **영어로 학부 수업 조교**를 맡았습니다 · 🏆 올해의 대학원 조교상(2017)
 - 코드잇 스프린트 AI 엔지니어 과정에서 프로젝트 4개 중 3개를 팀장으로 이끌었습니다 · 🏆 고용노동부장관상(장려상, 2026)
 
 ### 📄 논문
@@ -29,15 +29,17 @@
 **2026**
 | 프로젝트 | 내용 | 핵심 결과 | 기술 |
 |---|---|---|---|
-| [**SAVERS**](https://github.com/team-savers/savers-project) 🏆 | 재난 취약계층 맞춤 홍수 대피 안내 (앱 설치 불필요) · 팀장 | **로그에 없는 주장 0건**: 런타임 응답 30/30 일치, 적대 프롬프트 12/12 차단 · 대피 의향 **3.2 → 8.3** (52명, p<0.001) | FastAPI, LangChain, NetworkX, AWS EC2 |
+| [**SAVERS**](https://github.com/team-savers/savers-project) 🏆 | 재난 취약계층 맞춤 홍수 대피 안내 (앱 설치 불필요) · 팀장 | **기록에 없는 내용 0건**: 실제 응답 30/30 통과, 오답 유도 질문 12/12 차단 · 대피 의향 **3.2 → 8.3** (52명, p<0.001) | FastAPI, LangChain, NetworkX, AWS EC2 |
 | [**AI 광고 스튜디오**](https://github.com/codeit-part4-team2/ad-creative-studio) | 소상공인용 광고 이미지·문구 생성, 제품은 절대 바뀌지 않게 · 팀장 | 제품 보존 관문(마스크 CLIP ≥ 0.85) **4/4** 통과 · LCM-LoRA로 배경 생성 **17.47초 → 1.72초**(약 10배) · 테스트 486건 | SDXL, ControlNet, IP-Adapter, GCP |
-| [**입찰메이트**](https://github.com/Eastar0102/codeit-part3-team1) | 공공 RFP 100건(HWP·PDF) RAG 질의응답, 출처 인용·답변 불가 시 거절 · 평가 담당 | 골든셋 95문항으로 708개 조합 비교 · 최종 **MRR 0.977**, 거절 정확도 1.0(19/19), 응답 3.6초, **API 비용 0원** | LangChain, LangGraph, FAISS, KURE-v1, EXAONE 3.5 |
-| [**PillScope**](https://github.com/qja0707/OralMedicineImageDetection) | 경구약제 객체 탐지: 비슷한 56개 클래스, 이미지 186장, 51배 불균형 · 팀장 | Crop & Paste로 186 → 1,026장 · 검증 mAP@[.75:.95] **0.936** · WBF 앙상블로 비공개 Kaggle 대회 **0.851 → 0.9355** | YOLOv11, RT-DETRv2, RF-DETR |
+| [**입찰메이트**](https://github.com/Eastar0102/codeit-part3-team1) | 공공 RFP 100건(HWP·PDF) RAG 질의응답, 출처 인용·답변 불가 시 거절 · 평가 담당 | 평가용 질문 95개(골든셋)로 708개 조합 비교 · 최종 **MRR 0.977**, 거절 정확도 1.0(19/19), 응답 3.6초, **API 비용 0원** | LangChain, LangGraph, FAISS, KURE-v1, EXAONE 3.5 |
+| [**PillScope**](https://github.com/qja0707/OralMedicineImageDetection) | 경구약제 객체 탐지: 비슷한 56개 클래스, 이미지 186장, 51배 불균형 · 팀장 | Crop & Paste로 186 → 1,026장 · 검증 mAP@[.75:.95] **0.936** · WBF 앙상블로 수업 내 Kaggle 대회 **0.851 → 0.9355** | YOLOv11, RT-DETRv2, RF-DETR |
 
 **대학원 연구 (펜실베이니아 주립대)**
-- 유전 모델을 실제 생산 데이터에 맞추는 확률적 보정: 몬테카를로·실험계획법으로 불확실성 정량화, Simulated Annealing 생산 최적화 (2021–2024)
-- 과거 생산량으로 미래 생산량을 예측하는 LSTM 모델, 업계 표준(감소곡선) 대비 **정확도 최대 23% 향상** (2019–2020)
-- 유정에 물·가스가 함께 빨려 드는 현상의 해석해: 라플라스 방정식·중첩 원리로 다중 유정의 정확한 해 도출 (석사 논문, 2015–2018)
+- 원유 생산 모델을 실제 데이터에 맞추는 확률적 보정: 몬테카를로 시뮬레이션·실험계획법으로 예측 불확실성을 범위로 제시, 최적화 알고리즘으로 생산 조건 탐색 (박사 연구, 2021–2024)
+- 과거 생산량으로 미래 생산량을 예측하는 LSTM 모델, 업계 표준(감소곡선) 대비 **정확도 최대 23% 향상** (박사 연구, 2019–2020)
+- 생의학 논문 초록 문장 분류: BERT·SciBERT 임베딩으로 Word2Vec을 대체해, 임베딩 크기를 약 1/175로 줄이고도 같은 수준의 정확도 유지 (딥러닝 수업 프로젝트, 2인 팀, TensorFlow, 2019)
+- 원유와 함께 물·가스가 딸려 나오는 현상을 시뮬레이션 없이 계산하는 수학 공식 유도, 여러 유정으로 확장 (석사 논문 · SPE 2018 제1저자, 2015–2018)
+- 원유·물·가스 흐름 시뮬레이터를 MATLAB으로 처음부터 구현(약 1,000줄), 교과서 예제와 결과 일치 (수업 프로젝트, 2016)
 
 ### 🛠️ 기술
 **AI · LLM**<br/>
@@ -62,6 +64,7 @@
 <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white"/>
 
 **ML · 수리 · 데이터**<br/>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
 <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
@@ -69,16 +72,12 @@
 <br/>편미분방정식 해석해 · 몬테카를로 시뮬레이션 · 실험계획법 · 최적화 · 시계열·통계 모델링
 
 ### 🎓 학력 · 교육
-- **펜실베이니아 주립대학교 (미국)** — 에너지광물공학 박사과정 수료 (부전공: 통계학, 계산과학) · 2018–2024
-- **펜실베이니아 주립대학교 (미국)** — 석유천연가스공학 석사 · 2015–2018
-- **한양대학교** — 자원환경공학과 학사 · 학과 수석(33명 중 1위), 제2공과대학 차석 졸업 · 2009–2015
-- **코드잇 스프린트** — AI 엔지니어 10기 수료 · 2026
+- **펜실베이니아 주립대학교 (미국)** · 에너지광물공학 박사과정 수료 (부전공: 통계학, 계산과학) · 2018–2024
+- **펜실베이니아 주립대학교 (미국)** · 석유천연가스공학 석사 · 2015–2018
+- **한양대학교** · 자원환경공학과 학사 · 학과 수석(33명 중 1위), 제2공과대학 차석 졸업 · 2009–2015
+- **코드잇 스프린트** · AI 엔지니어 10기 수료 · 2026
 
 ### 🏅 수상 · 자격증
 - 🏆 고용노동부장관상(장려상), 제8회 K-디지털 트레이닝 해커톤 · 2026
 - 🏆 EME 올해의 대학원 조교상, 펜실베이니아 주립대 · 2017
 - TOEIC 985/990 · 데이터분석 준전문가(ADsP) · Engineer in Training (EIT, 미국 NCEES FE 시험 합격)
-
-<p align="center">
-  <img height="150" src="https://github-readme-stats.vercel.app/api/top-langs/?username=eunnamahn&layout=compact&hide_border=true&title_color=1F4E8C"/>
-</p>
