@@ -91,7 +91,7 @@
 <img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
 <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
 <img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square"/>
-<br/>편미분방정식 해석해 · 몬테카를로 시뮬레이션 · 실험계획법 · 최적화 · LSTM 시계열 예측 · 수치해석·시뮬레이션
+<br/>해석해 유도(라플라스 방정식·중첩 원리) · 몬테카를로 시뮬레이션 · 실험계획법 · 최적화 · LSTM 시계열 예측 · 수치해석·시뮬레이션
 
 ### 🎓 학력 · 교육
 - **펜실베이니아 주립대학교 (미국)** · 에너지광물공학 박사과정 수료 (부전공: 통계학, 계산과학) · 2018–2024
