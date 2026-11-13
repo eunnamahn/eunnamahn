@@ -35,7 +35,7 @@
 - **재난 취약계층을 위한 근거 기반 대피 안내 서비스의 설계 및 구현.**
   한국정보처리학회 학술대회(ACK 2026), KIPS_C2026B0142 · *제1저자 · 구두발표(2026.11.06)*
 - **Multi-Well Analytical Solution for Coning Under Simultaneous Steady-State Flow of Three Phases.**
-  SPE Improved Oil Recovery Conference, 2018 · *제1저자 · 영문* · [doi.org/10.2118/190182-MS](https://doi.org/10.2118/190182-MS)
+  SPE Improved Oil Recovery Conference, 2018 · *제1저자 · 구두발표 · 영문* · [doi.org/10.2118/190182-MS](https://doi.org/10.2118/190182-MS)
 
 ### 🎯 프로젝트
 
