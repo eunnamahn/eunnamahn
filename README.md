@@ -30,11 +30,11 @@
 
 ### 🎯 프로젝트
 
-**[SAVERS](https://github.com/eunnamahn/savers-project) · 재난 취약계층 맞춤 대피 안내** 🏆 — 2026.07–09 · 팀장 · PM · QA/보안 · 인프라 (4인)
+**[SAVERS](https://github.com/eunnamahn/savers-project) · 재난 취약계층 맞춤 대피 안내** 🏆 — 2026.07–09 · 평가 · 인프라 담당(팀장, PM) (4인)
 - 대피소·도보 경로는 OSMnx·NetworkX **규칙 코드가 결정**하고, LLM은 정해진 결과를 설명만 하는 구조
-- 검증기를 검증할 평가셋을 명세만 보고 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 채점 스크립트
-- 정답 답변 **35/35** 검증기 통과 · 오답 유도 **12/12** 차단 (처음 8/12 → 뚫린 4건 분석해 채점기 보강)
-- 거절이 정답인 대조군 6건을 넣어 **과소거절 100%(0/6)**를 발견, 원인을 검증기가 아닌 앞단 검색으로 특정
+- 검증기를 검증할 평가셋 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 거절 프로브 **34건**, 채점 스크립트
+- 검증기 평가: 정답 답변 35건 중 잘못 막힌 답 **0건**, 오답 유도 12건은 처음 8건만 걸러져 놓친 4건을 분석하고 보강해 **12/12**
+- 챗봇 거절 프로브에서 부당 거절 1/28, **과소거절 6/6(100%)** 발견, 원인을 검증기가 아닌 앞단 검색으로 추적 (측정 당시 생성기는 스텁)
 - 지인 52명 설문: 행동 명확성 **3.2 → 8.3점**(10점 만점, Wilcoxon p<0.001), "5분 안에 집을 나서겠다" 13% → 60%
 - 고용노동부장관상(장려상, **326팀 중 3위**) · ACK 2026 제1저자
 - 내가 쓴 코드: 평가 코드([`apps/ai-engine/eval`](https://github.com/eunnamahn/savers-project/tree/main/apps/ai-engine/eval)), FCM 실발송 [#214](https://github.com/team-savers/savers-project/pull/214) · [#215](https://github.com/team-savers/savers-project/pull/215), AWS EC2 배포
@@ -43,12 +43,12 @@
 
 **[입찰메이트](https://github.com/eunnamahn/bidmate-rfp-rag) · 공공 RFP 문서 RAG 질의응답·요약** — 2026.06–07 · 평가 담당 (5인)
 - K-means로 대표 문서를 골라 골든셋 50건 제작 → **5유형 95문항**으로 확장, 유형별 채점 스크립트 구현
-- 검색·답변 설정 **708개 조합**을 같은 골든셋으로 3단계 비교: **MRR 0.65 → 0.977**, 거절 정확도 0.91 → 1.0
-- OpenAI 대신 KURE-v1 + EXAONE 3.5 로컬 스택: 평균 응답 **11.3초 → 3.6초**, API 비용 0원
+- 검색·답변 설정 **708개 조합**을 95문항 개발셋으로 3단계 비교, 최종 설정 **MRR 0.977**, Hit@4 1.0, 거절 19/19 (선택과 평가에 같은 셋 사용)
+- OpenAI 대신 KURE-v1 + EXAONE 3.5(GCP VM의 Ollama) 로컬 스택: 평균 응답 **3.6초**, 외부 API 호출 비용 0원
 - 점수가 0.3에서 멈춘 원인이 모델이 아닌 **골든셋 오류**임을 찾아 수정, Ollama 컨텍스트 4K → 8K로 근거 잘림 해결, 지연만 6.75배 늘린 리랭커 제거
 - 내가 쓴 코드: 골든셋·전처리 실험([`experiments/`](https://github.com/eunnamahn/bidmate-rfp-rag/tree/main/experiments))
 
-`LangChain` `LangGraph` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
+`LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
 
 **[AI 광고 스튜디오](https://github.com/eunnamahn/ad-creative-studio) · 소상공인용 광고 이미지·문구 생성** — 2026.08 · 팀장 · PM · 평가 기준 설계 (5인)
 - **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 ≥ 0.85 + 육안 재검수로 대표 조합 **4/4** 통과
@@ -61,13 +61,13 @@
 **[PillScope](https://github.com/eunnamahn/OralMedicineImageDetection) · 경구약제 이미지 객체 탐지** — 2026.04–05 · 팀장 · PM · 모델 실험 (5인)
 - 비슷한 56종, 학습 이미지 186장, 클래스 불균형 51배 → 비슷한 사진을 같은 split으로 묶어 **데이터 누수 방지**
 - Crop & Paste 증강으로 **186 → 1,026장**, mAP@0.5 0.886 → 0.964, 탐지 못 하던 희귀 클래스까지 탐지
-- 4종 모델 7단계 실험에서 YOLOv11l이 검증 mAP@[.75:.95] **0.936**으로 최고(RF-DETR 0.882, RT-DETRv2 0.883), 3모델 WBF 앙상블로 Kaggle **0.851 → 0.936**
+- 4종 모델 7단계 실험에서 YOLOv11l이 대회 지표 검증 mAP@[.75:.95] **0.936**으로 가장 높음(RF-DETR 0.882, RT-DETRv2 0.883, 학습 이미지 수가 달라 통제 비교는 아님), 3모델 WBF 앙상블로 Kaggle **0.851 → 0.936**
 - 내가 쓴 코드: COCO → YOLO 파이프라인, EDA·전처리·증강 노트북([`members/eunnam`](https://github.com/eunnamahn/OralMedicineImageDetection/tree/main/members/eunnam))
 
 `YOLOv11` `RT-DETRv2` `RF-DETR` `COCO`
 
 **생의학 논문 초록 문장 분류 · BERT vs. SciBERT** — 2019 · Penn State 딥러닝 수업, 2인 팀(동일 기여)
-- BiLSTM-CRF의 Word2Vec 임베딩을 SciBERT로 교체해 임베딩 크기 **약 1/175**로 정확도 유지(92.35% → 92.43%)
+- BiLSTM-CRF의 Word2Vec 임베딩을 SciBERT로 교체해 어휘 수 **약 1/175**인 임베딩으로 정확도 유지(92.35% → 92.43%)
 
 `TensorFlow`
 
