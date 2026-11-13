@@ -16,11 +16,11 @@
 
 ### 🙋 소개
 - 수학적 모델을 만들고 **그 결과를 믿어도 되는지 검증하던 연구자**였습니다. 실제 서비스로 사람에게 닿는 일을 하고 싶어 AI 엔지니어로 전환했습니다.
-- **평가 기준을 먼저 세우고, 그 기준을 코드로 구현합니다.** 중요한 판단은 규칙 기반 코드가 내리고, LLM은 그 결과를 설명만 하며, 답변은 검증기를 거칩니다.
+- 지금은 **LLM과 RAG가 내놓은 답을 측정하는 평가 코드**를 만듭니다. SAVERS에서는 검증기를 시험하는 평가셋과 채점 스크립트를, 입찰메이트에서는 95문항 골든셋과 유형별 자동 채점기를 작성했습니다.
 - 미국 **펜실베이니아 주립대** 대학원에서 영어로 연구하고 논문을 쓰고 학부 수업을 가르쳤습니다.
-- 코드잇 스프린트 AI 엔지니어 과정(6개월): 팀 프로젝트 3회 + 해커톤 1회 · **팀장 3회 역임**
+- 코드잇 스프린트 AI 엔지니어 과정(6개월)에서 팀 프로젝트 3회와 해커톤 1회에 참여, **팀장 3회 역임**
 
-> 해석해로 시뮬레이터를 검증하던 일과 골든셋으로 LLM을 검증하는 일은 같은 질문에서 출발합니다.
+> 해석해로 시뮬레이터를 검증하던 일과 골든셋으로 LLM을 검증하는 일은 "이 답을 믿어도 되는가"라는 같은 질문에서 출발합니다.
 
 ### 📄 논문
 - **재난 취약계층을 위한 근거 기반 대피 안내 서비스의 설계 및 구현.**
@@ -30,9 +30,9 @@
 
 ### 🎯 프로젝트
 
-**[SAVERS](https://github.com/eunnamahn/savers-project) · 재난 취약계층 맞춤 대피 안내** 🏆 — 2026.07–09 · 평가 · 인프라 담당(팀장, PM) (4인)
+**[SAVERS](https://github.com/eunnamahn/savers-project) · 재난 취약계층 맞춤 대피 안내** 🏆 — 2026.07–09 · 팀장 · PM · 평가와 인프라 (4인)
 - 대피소·도보 경로는 OSMnx·NetworkX **규칙 코드가 결정**하고, LLM은 정해진 결과를 설명만 하는 구조
-- 검증기를 검증할 평가셋 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 거절 프로브 **34건**, 채점 스크립트
+- 검증기를 시험할 평가셋 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 거절 프로브 **34건**, 채점 스크립트
 - 검증기 평가: 정답 답변 35건 중 잘못 막힌 답 **0건**, 오답 유도 12건은 처음 8건만 걸러져 놓친 4건을 분석하고 보강해 **12/12**
 - 챗봇 거절 프로브에서 부당 거절 1/28, **과소거절 6/6(100%)** 발견, 원인을 검증기가 아닌 앞단 검색으로 추적 (측정 당시 생성기는 스텁)
 - 지인 52명 설문: 행동 명확성 **3.2 → 8.3점**(10점 만점, Wilcoxon p<0.001), "5분 안에 집을 나서겠다" 13% → 60%
@@ -51,7 +51,7 @@
 `LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
 
 **[AI 광고 스튜디오](https://github.com/eunnamahn/ad-creative-studio) · 소상공인용 광고 이미지·문구 생성** — 2026.08 · 팀장 · PM · 평가 기준 설계 (5인)
-- **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 ≥ 0.85 + 육안 재검수로 대표 조합 **4/4** 통과
+- **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 0.85 이상과 육안 재검수로 대표 조합 **4/4** 통과(대규모 평가는 미실시)
 - 4주 스프린트 운영, 최종 보고서 총괄
 - 팀 성과: LCM-LoRA로 배경 생성 17.47초 → 1.72초, 자동화 테스트 486건 통과
 - 내가 쓴 문서: 평가 기준 [`eval/eval_criteria.md`](https://github.com/eunnamahn/ad-creative-studio/blob/main/eval/eval_criteria.md)
@@ -80,12 +80,10 @@
 ### 🛠️ 기술
 **AI · LLM**<br/>
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white"/>
-<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white"/>
 <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"/>
 <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square"/>
 <img src="https://img.shields.io/badge/EXAONE%203.5-A50034?style=flat-square"/>
 <img src="https://img.shields.io/badge/YOLO-111F68?style=flat-square"/>
-<img src="https://img.shields.io/badge/Stable%20Diffusion-SDXL-7B3FE4?style=flat-square"/>
 
 **평가 · 품질**<br/>
 <img src="https://img.shields.io/badge/골든셋%20설계-1F4E8C?style=flat-square"/>
