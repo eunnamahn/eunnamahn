@@ -39,7 +39,7 @@
 - 고용노동부장관상(장려상, **326팀 중 공동 3위**) · ACK 2026 제1저자
 - 내가 쓴 코드: 평가 코드([`apps/ai-engine/eval`](https://github.com/eunnamahn/savers-project/tree/main/apps/ai-engine/eval)), FCM 실발송 [#214](https://github.com/team-savers/savers-project/pull/214) · [#215](https://github.com/team-savers/savers-project/pull/215), AWS EC2 배포
 
-`FastAPI` `LangChain` `OSMnx` `NetworkX` `AWS EC2` `FCM`
+`FastAPI` `ChromaDB` `OSMnx` `NetworkX` `AWS EC2` `FCM`
 
 **[입찰메이트](https://github.com/eunnamahn/bidmate-rfp-rag) · 공공 RFP 문서 RAG 질의응답·요약** — 2026.06–07 · 평가 담당 (5인) · [▶ 시연 영상](https://youtu.be/vdpqzdG4k2I)
 - K-means로 대표 문서를 골라 골든셋 50건 제작 → **5유형 95문항**으로 확장, 유형별 채점 스크립트 구현
