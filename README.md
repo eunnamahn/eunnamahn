@@ -32,6 +32,7 @@
 
 **[SAVERS](https://github.com/eunnamahn/savers-project) · 재난 취약계층 맞춤 대피 안내** 🏆 — 2026.07–09 · 팀장 · PM · 평가와 인프라 (4인) · [▶ 시연 영상](https://youtube.com/shorts/yv6POI7o4R8)
 - 대피소·도보 경로는 OSMnx·NetworkX **규칙 코드가 결정**하고, LLM은 정해진 결과를 설명만 하는 구조
+- 중도 하차한 팀원의 QA와 인프라를 이어받아 역할과 일정을 다시 정하고, FCM 실발송 연결과 Vercel·AWS EC2 배포 담당
 - 검증기를 시험할 평가셋 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 거절 프로브 **34건**, 채점 스크립트
 - 검증기 평가: 정답 답변 35건 중 잘못 막힌 답 **0건**, 오답 유도 12건은 처음 8건만 걸러져 놓친 4건을 분석하고 보강해 **12/12**
 - 챗봇 거절 프로브에서 부당 거절 1/28, **과소거절 6/6(100%)** 발견, 원인을 검증기가 아닌 앞단 검색으로 추적 (측정 당시 생성기는 스텁)
@@ -42,11 +43,12 @@
 `FastAPI` `ChromaDB` `OSMnx` `NetworkX` `AWS EC2` `Vercel` `FCM`
 
 **[입찰메이트](https://github.com/eunnamahn/bidmate-rfp-rag) · 공공 RFP 문서 RAG 질의응답·요약** — 2026.06–07 · 평가 담당 (5인) · [▶ 시연 영상](https://youtu.be/vdpqzdG4k2I)
+- 문서 전처리·청킹 **48개 조합** 실험 코드와 규칙 기반 공고 추천 API(FastAPI) 작성
 - K-means로 대표 문서를 골라 골든셋 50건 제작 → **5유형 95문항**으로 확장, 유형별 채점 스크립트 구현
 - 검색·답변 설정 **708개 조합**을 95문항 개발셋으로 3단계 비교, 최종 설정 **MRR 0.977**, Hit@4 1.0, 거절 19/19 (선택과 평가에 같은 셋 사용)
 - OpenAI 대신 KURE-v1 + EXAONE 3.5(GCP VM의 Ollama) 로컬 스택: 평균 응답 **3.6초**, 외부 API 호출 비용 0원
 - 점수가 0.3에서 멈춘 원인이 모델이 아닌 **골든셋 오류**임을 찾아 수정, Ollama 컨텍스트 4K → 8K로 근거 잘림 해결, 지연만 6.75배 늘린 리랭커 제거
-- 내가 쓴 코드: 골든셋·전처리 실험([`experiments/`](https://github.com/eunnamahn/bidmate-rfp-rag/tree/main/experiments))
+- 내가 쓴 코드: 골든셋·전처리 실험([`experiments/`](https://github.com/eunnamahn/bidmate-rfp-rag/tree/main/experiments)), 공고 추천 API([`src/recommender.py`](https://github.com/eunnamahn/bidmate-rfp-rag/blob/main/src/recommender.py))
 
 `LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
 
