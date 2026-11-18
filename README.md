@@ -15,8 +15,8 @@
 ---
 
 ### 🙋 소개
-- 수학적 모델을 만들고 **그 결과를 믿어도 되는지 검증하던 연구자**였습니다. 실제 서비스로 사람에게 닿는 일을 하고 싶어 AI 엔지니어로 전환했습니다.
-- 이후 **LLM과 RAG가 내놓은 답을 측정하는 평가 코드**를 만들어 왔습니다. SAVERS에서는 검증기를 시험하는 평가셋과 채점 스크립트를 작성하고, 거절해야 할 질문에 답해 버리는 결함의 원인을 검색 단계까지 추적했습니다. 입찰메이트에서는 95문항 골든셋과 유형별 자동 채점기를 만들어, 점수를 떨어뜨리던 골든셋 오류와 근거 잘림을 찾아 고쳤습니다.
+- 미국 대학원에서 해석해, 인공신경망 대리 모델, 시계열 예측 모델을 만들고 검증했고, 지금은 **LLM과 RAG의 답을 측정하는 평가 코드**를 만듭니다.
+- SAVERS에서는 챗봇이 거절해야 할 질문에 답하는 결함을 찾아 검색 단계까지 추적했고, 입찰메이트에서는 점수를 막던 골든셋 오류와 근거 잘림을 찾아 고쳤습니다.
 - 미국 **펜실베이니아 주립대** 대학원에서 영어로 연구하고 논문을 쓰고 학부 수업을 가르쳤습니다.
 - 코드잇 스프린트 AI 엔지니어 과정(8개월)에서 팀 프로젝트 3회와 해커톤 1회에 참여, **팀장 3회 역임**
 
@@ -85,11 +85,11 @@
 <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"/>
 <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square"/>
 <img src="https://img.shields.io/badge/EXAONE%203.5-A50034?style=flat-square"/>
-<img src="https://img.shields.io/badge/YOLO-111F68?style=flat-square"/>
+<img src="https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white"/>
 
-**평가 · 품질**<br/>
+**평가**<br/>
 <img src="https://img.shields.io/badge/골든셋%20설계-1F4E8C?style=flat-square"/>
-<img src="https://img.shields.io/badge/주장%20단위%20검증-1F4E8C?style=flat-square"/>
+<img src="https://img.shields.io/badge/Hit@k%20·%20MRR%20·%20거절%20정확도-1F4E8C?style=flat-square"/>
 <img src="https://img.shields.io/badge/RAGAS-1F4E8C?style=flat-square"/>
 <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
 <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
@@ -103,12 +103,12 @@
 <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white"/>
 <img src="https://img.shields.io/badge/FCM-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
 
-**ML · 수리 · 데이터**<br/>
+**ML · 비전**<br/>
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white"/>
 <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white"/>
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white"/>
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/YOLO-111F68?style=flat-square"/>
+<img src="https://img.shields.io/badge/실험계획법%20(DOE)-555555?style=flat-square"/>
 <img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square"/>
 <br/>해석해 유도(라플라스 방정식·중첩 원리) · 실험계획법(DOE) · 인공신경망 대리 모델 · 유전 알고리즘 · Seq2Seq-LSTM 시계열 예측 · PDE 수치해석·시뮬레이션
 
