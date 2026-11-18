@@ -37,9 +37,9 @@
 - 챗봇 거절 프로브에서 부당 거절 1/28, **과소거절 6/6(100%)** 발견, 원인을 검증기가 아닌 앞단 검색으로 추적 (측정 당시 생성기는 스텁)
 - 지인 52명 설문: 행동 명확성 **3.2 → 8.3점**(10점 만점, Wilcoxon p<0.001), "5분 안에 집을 나서겠다" 13% → 60%
 - 고용노동부장관상(장려상, **326팀 중 공동 3위**) · ACK 2026 제1저자
-- 내가 쓴 코드: 평가 코드([`apps/ai-engine/eval`](https://github.com/eunnamahn/savers-project/tree/main/apps/ai-engine/eval)), FCM 실발송 [#214](https://github.com/team-savers/savers-project/pull/214) · [#215](https://github.com/team-savers/savers-project/pull/215), AWS EC2 배포
+- 내가 쓴 코드: 평가 코드([`apps/ai-engine/eval`](https://github.com/eunnamahn/savers-project/tree/main/apps/ai-engine/eval)), FCM 실발송 [#214](https://github.com/team-savers/savers-project/pull/214) · [#215](https://github.com/team-savers/savers-project/pull/215), Vercel, AWS EC2 배포
 
-`FastAPI` `ChromaDB` `OSMnx` `NetworkX` `AWS EC2` `FCM`
+`FastAPI` `ChromaDB` `OSMnx` `NetworkX` `AWS EC2` `Vercel` `FCM`
 
 **[입찰메이트](https://github.com/eunnamahn/bidmate-rfp-rag) · 공공 RFP 문서 RAG 질의응답·요약** — 2026.06–07 · 평가 담당 (5인) · [▶ 시연 영상](https://youtu.be/vdpqzdG4k2I)
 - K-means로 대표 문서를 골라 골든셋 50건 제작 → **5유형 95문항**으로 확장, 유형별 채점 스크립트 구현
@@ -97,6 +97,7 @@
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
 <img src="https://img.shields.io/badge/AWS%20EC2-FF9900?style=flat-square&logo=amazonec2&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white"/>
 <img src="https://img.shields.io/badge/FCM-FFCA28?style=flat-square&logo=firebase&logoColor=black"/>
 
