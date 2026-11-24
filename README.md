@@ -1,7 +1,7 @@
 <h2 align="center">안녕하세요, AI 엔지니어 안은남입니다 👋</h2>
 <p align="center">
-  <b>LLM과 RAG의 답이 맞는지 측정하고, 틀리면 원인을 찾아 고치는 AI 엔지니어</b><br/>
-  수학적 모델링 연구를 바탕으로 골든셋, 채점기, 거절 측정을 설계합니다.
+  <b>LLM·RAG의 성능 문제를 측정하고 원인을 찾아 고치는 AI 엔지니어</b><br/>
+  수학적 모델링 연구 역량으로 골든셋, 채점기, 거절 측정을 설계합니다.
 </p>
 
 <p align="center">
@@ -34,7 +34,7 @@
 - 대피소·도보 경로는 OSMnx·NetworkX **규칙 코드가 결정**하고, LLM은 정해진 결과를 설명만 하는 구조
 - 중도 하차한 팀원의 QA와 인프라를 이어받아 역할과 일정을 다시 정하고, FCM 실발송 연결과 Vercel·AWS EC2 배포 담당
 - 검증기를 시험할 평가셋 직접 작성: 보호자 응답 골든셋 **40건**(답변 35·거절 5), 적대 회귀 **12건**, 거절 프로브 **34건**, 채점 스크립트
-- 검증기 평가: 정답 답변 35건 중 잘못 막힌 답 **0건**, 오답 유도 12건은 처음 8건만 걸러져 놓친 4건을 분석하고 보강해 **12/12**
+- 채점기 평가: 정답 답변 35건 중 잘못 막힌 답 **0건**, 오답 유도 12건은 처음 8건만 걸러져 놓친 4건을 분석하고 채점기를 보강해 **12/12**
 - 챗봇 거절 프로브에서 부당 거절 1/28, **과소거절 6/6(100%)** 발견, 원인을 검증기가 아닌 앞단 검색으로 추적 (측정 당시 생성기는 스텁)
 - 지인 52명 설문: 행동 명확성 **3.2 → 8.3점**(10점 만점, Wilcoxon p<0.001), "5분 안에 집을 나서겠다" 13% → 60%
 - 고용노동부장관상(장려상, **326팀 중 공동 3위**) · ACK 2026 제1저자
@@ -47,7 +47,7 @@
 - K-means로 대표 문서를 골라 골든셋 50건 제작 → **5유형 95문항**으로 확장, 유형별 채점 스크립트 구현
 - 검색·답변 설정 **708개 조합**을 95문항 개발셋으로 3단계 비교, 최종 설정 **MRR 0.977**, Hit@4 1.0, 거절 19/19 (선택과 평가에 같은 셋 사용)
 - OpenAI 대신 KURE-v1 + EXAONE 3.5(GCP VM의 Ollama) 로컬 스택: 평균 응답 **3.6초**, 외부 API 호출 비용 0원
-- 점수가 0.3에서 멈춘 원인이 모델이 아닌 **골든셋 오류**임을 찾아 수정, Ollama 컨텍스트 4K → 8K로 근거 잘림 해결, 지연만 6.75배 늘린 리랭커 제거
+- Hit@k가 0.3에서 멈춘 원인이 모델이 아닌 **골든셋의 정답 파일명 오류**임을 찾아 수정(수정 후 1.0), Ollama 컨텍스트 4K → 8K로 근거 잘림 해결, 지연만 6.75배 늘린 리랭커 제거
 - 내가 쓴 코드: 골든셋·전처리 실험([`experiments/`](https://github.com/eunnamahn/bidmate-rfp-rag/tree/main/experiments)), 공고 추천 API([`src/recommender.py`](https://github.com/eunnamahn/bidmate-rfp-rag/blob/main/src/recommender.py))
 
 `LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
@@ -63,7 +63,7 @@
 **[PillScope](https://github.com/eunnamahn/OralMedicineImageDetection) · 경구약제 이미지 객체 탐지** — 2026.04–05 · 팀장 · PM · 모델 실험 (5인)
 - 비슷한 56종, 학습 이미지 186장, 클래스 불균형 51배 → 비슷한 사진을 같은 split으로 묶어 **데이터 누수 방지**
 - Crop & Paste 증강으로 **186 → 1,026장**, mAP@0.5 0.886 → 0.964, 탐지 못 하던 희귀 클래스까지 탐지
-- 4종 모델 7단계 실험에서 YOLOv11l이 대회 지표 검증 mAP@[.75:.95] **0.936**으로 가장 높음(RF-DETR 0.882, RT-DETRv2 0.883, 학습 이미지 수가 달라 통제 비교는 아님), 3모델 WBF 앙상블로 Kaggle **0.851 → 0.936**
+- 4종 모델 7단계 실험에서 YOLOv11l이 대회 지표 검증 mAP@[.75:.95] **0.936**으로 가장 높음(RF-DETR 0.882, RT-DETRv2 0.883, 학습 이미지 수가 달라 통제 비교는 아님), 신뢰도 임계값 조정과 3모델 WBF 앙상블로 Kaggle **0.851 → 0.9355**
 - 내가 쓴 코드: COCO → YOLO 파이프라인, EDA·전처리·증강 노트북([`members/eunnam`](https://github.com/eunnamahn/OralMedicineImageDetection/tree/main/members/eunnam))
 
 `YOLOv11` `RT-DETRv2` `RF-DETR` `COCO`
@@ -85,7 +85,6 @@
 <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white"/>
 <img src="https://img.shields.io/badge/FAISS-0467DF?style=flat-square"/>
 <img src="https://img.shields.io/badge/EXAONE%203.5-A50034?style=flat-square"/>
-<img src="https://img.shields.io/badge/Claude%20Code-D97757?style=flat-square&logo=anthropic&logoColor=white"/>
 
 **평가**<br/>
 <img src="https://img.shields.io/badge/골든셋%20설계-1F4E8C?style=flat-square"/>
