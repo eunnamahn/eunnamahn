@@ -9,7 +9,7 @@
   <a href="https://eunnamahn.github.io/en/"><img src="https://img.shields.io/badge/English-Website-1F4E8C?style=flat-square"/></a>
   <a href="https://www.linkedin.com/in/eunnamahn/"><img src="https://img.shields.io/badge/LinkedIn-eunnamahn-0A66C2?style=flat-square&logo=linkedin&logoColor=white"/></a>
   <a href="mailto:baduk89@hanmail.net"><img src="https://img.shields.io/badge/Email-baduk89%40hanmail.net-555555?style=flat-square&logo=maildotru&logoColor=white"/></a>
-  <img src="https://img.shields.io/badge/TOEIC-985%2F990-555555?style=flat-square"/>
+  <img src="https://img.shields.io/badge/TOEIC-985-555555?style=flat-square"/>
 </p>
 
 ---
@@ -40,7 +40,7 @@
 - 고용노동부장관상(장려상, **326팀 중 공동 3위**) · ACK 2026 제1저자
 - 내가 쓴 코드: 평가 코드([`apps/ai-engine/eval`](https://github.com/eunnamahn/savers-project/tree/main/apps/ai-engine/eval)), FCM 실발송 [#214](https://github.com/team-savers/savers-project/pull/214) · [#215](https://github.com/team-savers/savers-project/pull/215), Vercel, AWS EC2 배포
 
-`FastAPI` `ChromaDB` `OSMnx` `NetworkX` `AWS EC2` `Vercel` `FCM`
+`FastAPI` `Docker Compose` `AWS EC2` `Vercel` `FCM` `pytest`
 
 **[입찰메이트](https://github.com/eunnamahn/bidmate-rfp-rag) · 공공 RFP 문서 RAG 질의응답·요약** — 2026.06–07 · 평가 담당 (5인) · [▶ 시연 영상](https://youtu.be/vdpqzdG4k2I)
 - 문서 전처리·청킹 **48개 조합** 실험 코드와 규칙 기반 공고 추천 API(FastAPI) 작성
@@ -50,7 +50,7 @@
 - Hit@k가 0.3에서 멈춘 원인이 모델이 아닌 **골든셋의 정답 파일명 오류**임을 찾아 수정(수정 후 1.0), Ollama 컨텍스트 4K → 8K로 근거 잘림 해결, 지연만 6.75배 늘린 리랭커 제거
 - 내가 쓴 코드: 골든셋·전처리 실험([`experiments/`](https://github.com/eunnamahn/bidmate-rfp-rag/tree/main/experiments)), 공고 추천 API([`src/recommender.py`](https://github.com/eunnamahn/bidmate-rfp-rag/blob/main/src/recommender.py))
 
-`LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `RAGAS`
+`LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `Ollama` `RAGAS` `FastAPI`
 
 **[AI 광고 스튜디오](https://github.com/eunnamahn/ad-creative-studio) · 소상공인용 광고 이미지·문구 생성** — 2026.08 · 팀장 · PM · 평가 기준 설계 (5인) · [▶ 시연 영상](https://youtu.be/dgjC8w8YQi8) · [생성 쇼츠 예시](https://youtu.be/k3lqPzKlClQ)
 - **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 0.85 이상과 육안 재검수로 대표 조합 **4/4** 통과(대규모 평가는 미실시)
@@ -58,7 +58,7 @@
 - 팀 성과: LCM-LoRA로 배경 생성 17.47초 → 1.72초, 자동화 테스트 486건 통과
 - 내가 쓴 문서: 평가 기준 [`eval/eval_criteria.md`](https://github.com/eunnamahn/ad-creative-studio/blob/main/eval/eval_criteria.md)
 
-`SDXL` `ControlNet` `IP-Adapter` `FastAPI` `GCP L4`
+`CLIP 유사도 평가 기준`
 
 **[PillScope](https://github.com/eunnamahn/OralMedicineImageDetection) · 경구약제 이미지 객체 탐지** — 2026.04–05 · 팀장 · PM · 모델 실험 (5인)
 - 비슷한 56종, 학습 이미지 186장, 클래스 불균형 51배 → 비슷한 사진을 같은 split으로 묶어 **데이터 누수 방지**
@@ -126,5 +126,5 @@
 ### 📜 자격증 · 교육
 - 코드잇 스프린트 AI 엔지니어 10기 수료 (팀 프로젝트 3회와 해커톤 1회, 팀장 3회 역임) · 2026.08
 - 데이터분석 준전문가(ADsP), 한국데이터산업진흥원 · 2026.06
-- TOEIC 985 / 990 (Listening 490, Reading 495) · 2026.03
+- TOEIC 985 · 2026.03
 - Engineer in Training(EIT), 미국 NCEES FE 시험 합격 · 2017.03
