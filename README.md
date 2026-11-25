@@ -52,14 +52,6 @@
 
 `LangChain` `FAISS` `KURE-v1` `EXAONE 3.5` `Ollama` `RAGAS` `FastAPI`
 
-**[AI 광고 스튜디오](https://github.com/eunnamahn/ad-creative-studio) · 소상공인용 광고 이미지·문구 생성** — 2026.08 · 팀장 · PM · 평가 기준 설계 (5인) · [▶ 시연 영상](https://youtu.be/dgjC8w8YQi8) · [생성 쇼츠 예시](https://youtu.be/k3lqPzKlClQ)
-- **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 0.85 이상과 육안 재검수로 대표 조합 **4/4** 통과(대규모 평가는 미실시)
-- 4주 스프린트 운영, 최종 보고서 총괄
-- 팀 성과: LCM-LoRA로 배경 생성 17.47초 → 1.72초, 자동화 테스트 486건 통과
-- 내가 쓴 문서: 평가 기준 [`eval/eval_criteria.md`](https://github.com/eunnamahn/ad-creative-studio/blob/main/eval/eval_criteria.md)
-
-`CLIP 유사도 평가 기준`
-
 **[PillScope](https://github.com/eunnamahn/OralMedicineImageDetection) · 경구약제 이미지 객체 탐지** — 2026.04–05 · 팀장 · PM · 모델 실험 (5인)
 - 비슷한 56종, 학습 이미지 186장, 클래스 불균형 51배 → 비슷한 사진을 같은 split으로 묶어 **데이터 누수 방지**
 - Crop & Paste 증강으로 **186 → 1,026장**, mAP@0.5 0.886 → 0.964, 탐지 못 하던 희귀 클래스까지 탐지
@@ -67,6 +59,14 @@
 - 내가 쓴 코드: COCO → YOLO 파이프라인, EDA·전처리·증강 노트북([`members/eunnam`](https://github.com/eunnamahn/OralMedicineImageDetection/tree/main/members/eunnam))
 
 `YOLOv11` `RT-DETRv2` `RF-DETR` `COCO`
+
+**[AI 광고 스튜디오](https://github.com/eunnamahn/ad-creative-studio) · 소상공인용 광고 이미지·문구 생성** — 2026.08 · 팀장 · PM · 평가 기준 설계 (5인) · [▶ 시연 영상](https://youtu.be/dgjC8w8YQi8) · [생성 쇼츠 예시](https://youtu.be/k3lqPzKlClQ)
+- **제품 보존율을 1순위 지표**로 정의, 마스크 영역 CLIP 유사도 0.85 이상과 육안 재검수로 대표 조합 **4/4** 통과(대규모 평가는 미실시)
+- 4주 스프린트 운영, 최종 보고서 총괄
+- 팀 성과: LCM-LoRA로 배경 생성 17.47초 → 1.72초, 자동화 테스트 486건 통과
+- 내가 쓴 문서: 평가 기준 [`eval/eval_criteria.md`](https://github.com/eunnamahn/ad-creative-studio/blob/main/eval/eval_criteria.md)
+
+`CLIP 유사도 평가 기준`
 
 **생의학 논문 초록 문장 분류 · BERT vs. SciBERT** — 2019 · Penn State 딥러닝 수업, 2인 팀(동일 기여)
 - BiLSTM-CRF의 Word2Vec 임베딩을 SciBERT로 교체해 어휘 수 **약 1/175**인 임베딩으로 정확도 유지(92.35% → 92.43%)
